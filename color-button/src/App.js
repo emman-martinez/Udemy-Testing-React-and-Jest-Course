@@ -1,9 +1,20 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [buttonColor, setButtonColor] = useState("red");
+  const newBottonColor = buttonColor === "red" ? "blue" : "red";
+
   return (
     <div>
-      <button style={{ backgroundColor: "red" }}>Change to blue</button>
+      <button
+        onClick={() => {
+          setButtonColor(newBottonColor);
+        }}
+        style={{ backgroundColor: buttonColor }}
+      >
+        Change to {newBottonColor}
+      </button>
     </div>
   );
 }
