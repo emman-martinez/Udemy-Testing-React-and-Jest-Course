@@ -5,8 +5,9 @@ export function replaceCamelWithSpaces(colorName) {
 }
 
 function App() {
-  const [buttonColor, setButtonColor] = useState("red");
-  const newBottonColor = buttonColor === "red" ? "blue" : "red";
+  const [buttonColor, setButtonColor] = useState("MediumVioletRed");
+  const newBottonColor =
+    buttonColor === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed";
   const [disabled, setDisabled] = useState(false);
 
   return (
@@ -18,7 +19,7 @@ function App() {
         disabled={disabled}
         style={{ backgroundColor: !disabled ? buttonColor : "gray" }}
       >
-        Change to {newBottonColor}
+        Change to {replaceCamelWithSpaces(newBottonColor)}
       </button>
       <input
         aria-checked={disabled}
