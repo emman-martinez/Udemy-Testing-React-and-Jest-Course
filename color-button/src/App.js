@@ -13,7 +13,7 @@ function App() {
           setButtonColor(newBottonColor);
         }}
         disabled={disabled}
-        style={{ backgroundColor: buttonColor }}
+        style={{ backgroundColor: !disabled ? buttonColor : "gray" }}
       >
         Change to {newBottonColor}
       </button>
